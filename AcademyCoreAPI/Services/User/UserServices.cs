@@ -1,4 +1,5 @@
-﻿using AcademyCoreAPI.DataModels;
+﻿using AcademyCoreAPI.Controllers;
+using AcademyCoreAPI.DataModels;
 using AcademyCoreAPI.Helpers;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,8 @@ namespace AcademyCoreAPI.Services.User
     }
     public class UserServices : IUserService
     {
-        private DataContext _context;
-        public UserServices(DataContext context)
+        private AcademyContext _context;
+        public UserServices(AcademyContext context)
         {
             _context = context;
         }

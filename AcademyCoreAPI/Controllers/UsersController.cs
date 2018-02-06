@@ -18,8 +18,7 @@ using System.Security.Claims;
 
 namespace AcademyCoreAPI.Controllers
 {
-    [Authorize]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsersController : Controller
     {
         private IUserService _userService;
@@ -72,6 +71,7 @@ namespace AcademyCoreAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost]
+        [Route("Register")]
         public IActionResult Register([FromBody]UserDto userDto)
         {
             // map dto to entity

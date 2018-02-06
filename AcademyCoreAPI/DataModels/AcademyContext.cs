@@ -18,5 +18,6 @@ namespace AcademyCoreAPI.Controllers
 		public DbSet<User> tblUser { get; set; }
         public DbSet<UserRole> tblUserRole { get; set; }
 		public DbSet<UserDetail> USP_getUserDetails { get; set; }
-	}
+        public DbSet<UserModel> Users { get; set; }
+    }
 }
