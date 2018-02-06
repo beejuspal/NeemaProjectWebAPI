@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AcademyCoreAPI.DataModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AcademyCoreAPI.Controllers
 {
@@ -35,6 +36,14 @@ namespace AcademyCoreAPI.Controllers
         {
             return _context.tblUserRole;
         }
+		// Get all User List
+		[HttpGet("AllUser")]
+		public IEnumerable<UserDetail> GetUsers()
+		{
+			List<UserDetail> lst = _context.USP_getUserDetails
+					 .FromSql("USP_getUserDetails").ToList();
+			return lst;
+		}
 
 		// Get all User Roles Except Admin
 		//[Route("api/UserRole")]
