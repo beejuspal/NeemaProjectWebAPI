@@ -18,6 +18,7 @@ using System.Security.Claims;
 
 namespace AcademyCoreAPI.Controllers
 {
+	[Authorize]
     [Route("api/[controller]")]
     public class UsersController : Controller
     {
