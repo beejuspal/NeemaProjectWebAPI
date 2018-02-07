@@ -77,10 +77,15 @@ namespace AcademyCoreAPI
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
-
+            
             app.UseAuthentication();
-
+         
             app.UseMvc();
+
+            app.Run(async (Context) =>
+           {
+               await Context.Response.WriteAsync("MVC didnt find anything");
+           });
         }
     }
 }
