@@ -10,20 +10,20 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "AcademyCoreAPI": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "api/students",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:3990/"
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:3990/api/User"
+    },
+    "AcademyCoreAPI": {
+      "applicationUrl": "http://localhost:3990/",
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:3990/api/students"
     }
   }
 }
