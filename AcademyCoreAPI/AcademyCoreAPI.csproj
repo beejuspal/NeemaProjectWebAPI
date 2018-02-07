@@ -5,6 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile2.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile3.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile4.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile5.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile6.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile7.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile8.pubxml" />
+    <None Remove="Properties\PublishProfiles\CustomProfile9.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

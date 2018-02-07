@@ -81,6 +81,10 @@ namespace AcademyCoreAPI
             app.UseAuthentication();
 
             app.UseMvc();
-        }
+			app.Run(async (Context) =>
+			{
+				await Context.Response.WriteAsync("MVC didnt find anything");
+			});
+		}
     }
 }
