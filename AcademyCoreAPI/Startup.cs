@@ -84,7 +84,7 @@ namespace AcademyCoreAPI
 
             app.Run(async (Context) =>
            {
-               await Context.Response.WriteAsync("MVC didnt find anything");
+               await Context.Response.WriteAsync("Net Core Web Api is working fine !!! Welcome.");
            });
         }
     }

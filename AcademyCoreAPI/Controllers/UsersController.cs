@@ -91,7 +91,7 @@ namespace AcademyCoreAPI.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("allusers")]
         public IActionResult GetAll()
         {
             var users = _userService.GetAll();
