@@ -1,6 +1,7 @@
 ﻿using AcademyCoreAPI.Controllers;
 using AcademyCoreAPI.DataModels;
 using AcademyCoreAPI.Helpers;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,9 +74,13 @@ namespace AcademyCoreAPI.Services.User
             }
         }
 
-        public IEnumerable<UserModel> GetAll()
+        public IEnumerable<UserDetail> GetAll()
         {
-            return _context.Users;
+
+			List<UserDetail> lst = _context.USP_getUsers
+					 .FromSql("usp_getusers").ToList();
+			return lst;
+			//return _context.Users;
         }
 
         public UserModel GetById(int id)
