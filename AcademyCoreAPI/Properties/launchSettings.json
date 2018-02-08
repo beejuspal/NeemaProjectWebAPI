@@ -23,7 +23,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "launchBrowser": true,
-      "launchUrl": "http://localhost:3990/api/students"
+      "launchUrl": "http://localhost:3990"
     }
   }
 }

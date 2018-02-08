@@ -91,12 +91,12 @@ namespace AcademyCoreAPI.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("allusers")]
         public IActionResult GetAll()
         {
-            var users = _userService.GetAll();
-            var userDtos = _mapper.Map<IList<UserDto>>(users);
-            return Ok(userDtos);
+            var users = _userService.GetAllUserDetail();
+            //var userDtos = _mapper.Map<IList<UserDto>>(users);
+            return Ok(users);
         }
 
         [HttpGet("{id}")]
