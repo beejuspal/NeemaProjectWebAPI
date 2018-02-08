@@ -11,9 +11,11 @@ namespace AcademyCoreAPI.Services.User
 {
     public interface IUserService
     {
-        UserModel Authenticate(string username, string password);
+		
+		UserModel Authenticate(string username, string password);
         IEnumerable<UserModel> GetAll();
-        UserModel GetById(int id);
+		IEnumerable<UserDetail> GetAllUserDetail();
+		UserModel GetById(int id);
         UserModel Create(UserModel user, string password);
         void Update(UserModel userParam, string password = null);
         void Delete(int id);
@@ -77,13 +79,22 @@ namespace AcademyCoreAPI.Services.User
         public IEnumerable<UserModel> GetAll()
         {
 
-			List<UserModel> lst = _context.USP_getUsers
+			//List<UserModel> lst = _context.USP_getUsers
+			//		 .FromSql("usp_getusers").ToList();
+			//return lst;
+			return _context.Users;
+        }
+		public IEnumerable<UserDetail> GetAllUserDetail()
+		{
+
+			List<UserDetail> lst = _context.USP_getUsers
 					 .FromSql("usp_getusers").ToList();
 			return lst;
-			//return _context.Users;
-        }
+			
+		}
 
-        public UserModel GetById(int id)
+
+		public UserModel GetById(int id)
         {
             return _context.Users.Find(id);
         }
