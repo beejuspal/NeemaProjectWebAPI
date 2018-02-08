@@ -74,10 +74,10 @@ namespace AcademyCoreAPI.Services.User
             }
         }
 
-        public IEnumerable<UserDetail> GetAll()
+        public IEnumerable<UserModel> GetAll()
         {
 
-			List<UserDetail> lst = _context.USP_getUsers
+			List<UserModel> lst = _context.USP_getUsers
 					 .FromSql("usp_getusers").ToList();
 			return lst;
 			//return _context.Users;
